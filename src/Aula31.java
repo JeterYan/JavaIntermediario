@@ -15,12 +15,12 @@ public class Aula31 {
 
         System.out.println("Products:");
         System.out.printf(prod1 + ", which price is $%.2f%n", price1);
-        System.out.printf("Office desk, which price is %.2f%n", price2);
+        System.out.printf(prod2 + ", which price is %.2f%n", price2);
 
         System.out.println("Record: " + age + " years old, code " + code + " and gender: " + gender);
 
         System.out.printf("Measure with eight decimal places: %.8f%n", measure);
-        System.out.printf("Rouded (three decimal places): %.3f%n",measure);
+        System.out.printf("Rouded (three decimal places): %.3f%n", measure);
         System.out.printf("US decimal point: %.3f%n", measure);
 
     }
