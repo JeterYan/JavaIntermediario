@@ -3,18 +3,15 @@ package Exercicios;
 import java.util.Scanner;
 
 public class Ex02 {
-    static void main() {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         int numero = input.nextInt();
 
-        int par = numero * (numero + 1) / 2;
-        int impar = numero * (numero + 1) % 2;
-
-        if (par == impar) {
-            System.out.println("Par");
-        } else  {
-            System.out.println("Impar");
+        if (numero % 2 == 0) {
+            System.out.println("O número " + numero + " é Par.");
+        } else {
+            System.out.println("O número " + numero + " é Ímpar.");
         }
 
     }
