@@ -1,6 +1,6 @@
-package application;
+package ProblemaPOO.application;
 
-import intities.Triangle;
+import ProblemaPOO.intities.Triangle;
 
 import java.util.Locale;
 import java.util.Scanner;

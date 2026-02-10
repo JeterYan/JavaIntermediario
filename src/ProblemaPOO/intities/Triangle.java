@@ -1,4 +1,4 @@
-package intities;
+package ProblemaPOO.intities;
 
 public class Triangle {
 
