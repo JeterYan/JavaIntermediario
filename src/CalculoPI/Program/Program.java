@@ -11,15 +11,14 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Calculator calculator = new Calculator();
         double radius = sc.nextDouble();
 
-        double c = calculator.circumference(radius);
+        double c = Calculator.circumference(radius);
 
-        double v = calculator.volume(radius);
+        double v = Calculator.volume(radius);
 
         System.out.printf("Circuference: %.2f%n", c);
         System.out.printf("Volume: %.2f%n", v);
-        System.out.printf("PI value: %.2f%n", calculator.PI);
+        System.out.printf("PI value: %.2f%n", Calculator.PI);
     }
 }
