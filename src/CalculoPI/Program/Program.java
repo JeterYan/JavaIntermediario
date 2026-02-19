@@ -1,6 +1,6 @@
 package CalculoPI.Program;
 
-import CalculoPI.util.Calculator;
+import CalculoPI.Util.Calculator;
 
 import java.util.Locale;
 import java.util.Scanner;

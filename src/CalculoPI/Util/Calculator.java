@@ -1,4 +1,4 @@
-package CalculoPI.util;
+package CalculoPI.Util;
 
 public class Calculator {
     public final double PI = 3.14159;
