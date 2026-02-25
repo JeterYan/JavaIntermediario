@@ -11,6 +11,10 @@ public class ProductConstructor {
         this.price = price;
         this.quantity = quantity;
     }
+    public ProductConstructor(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
 
     public double totalValueInStock() {
         return price * quantity;
