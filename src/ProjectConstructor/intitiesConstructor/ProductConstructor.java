@@ -6,6 +6,10 @@ public class ProductConstructor {
     private double price;
     private int quantity;
 
+    public ProductConstructor() {
+
+    }
+
     public ProductConstructor(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
@@ -21,20 +25,20 @@ public class ProductConstructor {
         return name;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
     }
 
     public double totalValueInStock() {
