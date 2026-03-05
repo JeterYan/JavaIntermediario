@@ -1,6 +1,6 @@
 package aula97Vetores.application;
 
-import aula97Vetores.entities.Product;
+import aula97Vetores.entities.Pessoa;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -11,24 +11,37 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
-        Product[] vect = new Product[n];
+        System.out.println("Qual a quantidade de pessoas?");
+        int quantidadePessoas = sc.nextInt();
 
-        for (int i = 0; i < vect.length; i++) {
-            sc.nextLine();
-            String nome = sc.nextLine();
-            double price = sc.nextDouble();
-            vect[i] = new Product(nome, price);
+        Pessoa[] pessoas = new Pessoa[quantidadePessoas];
+
+        for (int i = 0; i < quantidadePessoas; i++) {
+            System.out.println("Digite seu nome:");
+            String nome = sc.next();
+            System.out.println("Digite sua idade:");
+            int idade = sc.nextInt();
+            System.out.println("Digite sua altura:");
+            double altura = sc.nextDouble();
+            pessoas[i] = new Pessoa(nome, idade, altura);
         }
 
-        double soma = 0.0;
-        for (int i = 0; i < vect.length; i++) {
-            soma += vect[i].getPrice();
+        int soma = 0;
+        for (int i = 0; i < quantidadePessoas; i++) {
+            soma += pessoas[i].getIdade();
+        }
+        int mediaIdade = soma / quantidadePessoas;
+        System.out.println("Media idades das pessoas: " + mediaIdade);
+
+        int idadeMenor16 = 0;
+        for (int i = 0; i < quantidadePessoas; i++) {
+            if (pessoas[i].getIdade() < 16) {
+                idadeMenor16++;
+            }
         }
 
-        double avg = soma / vect.length;
-
-        System.out.printf("Average price: %.2f%n", avg);
+        double menor16 = idadeMenor16 * 100.0 / quantidadePessoas;
+        System.out.printf("Porcentagem de essoas com menos de 16 anos: %.1f%%%n", menor16);
 
         sc.nextLine();
     }
